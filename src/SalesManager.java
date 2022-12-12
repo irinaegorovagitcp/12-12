@@ -15,6 +15,7 @@ public class SalesManager {
         return max;
     }
 
+
     public int min() {
         int min = max();
         for (int sale : sales) {
@@ -23,5 +24,12 @@ public class SalesManager {
             }
         }
         return min;
+    }
+    public int getAverageSale() {
+        int sum = 0;
+        for (int sale : sales) {
+            sum += sale;
+                    }
+        return (sum - min() - max());
     }
 }
